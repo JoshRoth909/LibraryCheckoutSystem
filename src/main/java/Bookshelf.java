@@ -1,5 +1,3 @@
-package com.labC.libraryCheckoutSystem.Model;
-
 import javax.persistence.*;
 
 @Entity
