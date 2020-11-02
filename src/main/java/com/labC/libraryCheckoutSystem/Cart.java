@@ -1,4 +1,4 @@
-package com.labC.libraryCheckoutSystem.cartModel;
+package com.labC.libraryCheckoutSystem;
 
 
 import javax.persistence.Entity;
