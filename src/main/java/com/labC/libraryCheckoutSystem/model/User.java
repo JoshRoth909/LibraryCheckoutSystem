@@ -1,4 +1,4 @@
-package com.labC.libraryCheckoutSystem;
+package com.labC.libraryCheckoutSystem.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
