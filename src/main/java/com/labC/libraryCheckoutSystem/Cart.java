@@ -11,21 +11,33 @@ public class Cart {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
-    private int id;
+    private Long bookId;
+    private Long userId;
     private String book;
     private boolean checkStatus;
-    public Cart(int id, String book, boolean checkStatus) {
+    public Cart(Long id, Long bookId, Long userId, String book, boolean checkStatus) {
         this.id = id;
+        this.bookId = bookId;
+        this.userId = userId;
         this.book = book;
         this.checkStatus = checkStatus;
     }
 
-    public int getId(){
+    public Long getId(){
         return id;
     }
 
-    public void setId(int id){ this.id = id; }
+    public void setId(Long id){ this.id = id; }
+
+    public Long getBookId() { return bookId; }
+
+    public void setBookId(Long bookId) { this.bookId = bookId; }
+
+    public Long getUserId() { return userId; }
+
+    public void setUserId(Long userId) { this.userId = userId; }
 
     public String getBook(){
         return book;
@@ -35,12 +47,8 @@ public class Cart {
         this.book = book;
     }
 
-    public boolean getCheckStatus(){
-        return checkStatus;
-    }
+    public boolean isCheckStatus() { return checkStatus; }
 
-    public void setCheckStatus(boolean checkStatus){
-        this.checkStatus = checkStatus;
-    }
+    public void setCheckStatus(boolean checkStatus) { this.checkStatus = checkStatus; }
 
 }
