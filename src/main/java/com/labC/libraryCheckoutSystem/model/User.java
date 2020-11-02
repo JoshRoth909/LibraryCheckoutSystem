@@ -11,9 +11,13 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     private String name;
     private String email;
 
+
+
+    //Getters and Setters
     public User(long id, String name, String email) {
         this.id = id;
         this.name = name;
@@ -22,7 +26,7 @@ public class User {
 
     public User(){}
 
-    public void setId(long id) {
+    public void getId(long id) {
         this.id = id;
     }
 
