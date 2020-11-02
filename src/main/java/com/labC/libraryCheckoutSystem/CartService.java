@@ -1,22 +1,16 @@
 package com.labC.libraryCheckoutSystem;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
-public class CartService implements CommandLineRunner {
+@Service
+public class CartService {
 
     @Autowired
     CartRepo cartRepo;
 
-    @Autowired
-    CartService cartService;
-
-
-    @Override
-    public void run(String... args) throws Exception {
-        cartRepo.save(new Cart());
+    public void saveCart(String book,boolean checkStatus){
+        cartRepo.save(new Cart(book, checkStatus));
         System.out.println("Book added to cart");
     }
 }
