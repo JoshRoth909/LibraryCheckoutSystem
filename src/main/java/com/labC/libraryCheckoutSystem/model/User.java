@@ -1,9 +1,6 @@
 package com.labC.libraryCheckoutSystem.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class User {
@@ -12,7 +9,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @OneToMany
+    //one name could possibly belong to multiple users
     private String name;
+
+    @OneToOne
+    //one email belongs to one user
     private String email;
 
 
