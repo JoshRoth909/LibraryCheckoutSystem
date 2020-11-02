@@ -21,7 +21,7 @@ public class Bookshelf {
     @OneToMany(mappedBy = "book_id")
     private Books book;
 
-    public int getBook() {
+    public long getBook() {
         return book_id;
     }
 }
