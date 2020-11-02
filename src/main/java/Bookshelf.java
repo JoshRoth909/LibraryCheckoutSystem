@@ -4,21 +4,21 @@ import javax.persistence.*;
 public class Bookshelf {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private long id;
 
     public Bookshelf() {}
 
-    public int getId() {
+    public long getId() {
         return id;
     }
     @OneToOne(mappedBy = "user_id")
     private Users users;
 
-    public int getUser_id() {
+    public long getUser_id() {
         return user_id;
     }
 
-    @OneToOne(mappedBy = "book_id")
+    @OneToMany(mappedBy = "book_id")
     private Books book;
 
     public int getBook() {
