@@ -15,7 +15,6 @@ public class Cart {
     private int id;
     private String book;
     private boolean checkStatus;
-
     public Cart(int id, String book, boolean checkStatus) {
         this.id = id;
         this.book = book;
@@ -26,9 +25,7 @@ public class Cart {
         return id;
     }
 
-    public void setId(int id){
-        this.id = id;
-    }
+    public void setId(int id){ this.id = id; }
 
     public String getBook(){
         return book;
