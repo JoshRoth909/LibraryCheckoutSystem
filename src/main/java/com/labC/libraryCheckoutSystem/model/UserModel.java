@@ -3,33 +3,29 @@ package com.labC.libraryCheckoutSystem.model;
 import javax.persistence.*;
 
 @Entity
-public class User {
+public class UserModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @OneToMany
-    //one name could possibly belong to multiple users
     private String name;
-
-    @OneToOne
-    //one email belongs to one user
     private String email;
 
 
 
-    //Getters and Setters
-    public User(long id, String name, String email) {
+    //Constructors
+    public UserModel(long id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
     }
 
-    public User(){}
+    public UserModel(){}
 
-    public void getId(long id) {
-        this.id = id;
+    //Getters and Setters
+    public long getId() {
+        return id;
     }
 
     public String getName() {
