@@ -10,7 +10,7 @@ public class Cart {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private boolean bookStatus;
+    private boolean isComplete;
 
     @OneToOne(mappedBy = "users")
     private Users user;
@@ -24,10 +24,8 @@ public class Cart {
         return id;
     }
 
-    public List<Books> getBooks(){
-        return books;
-    }
+    public List<Books> getBooks() { return books; }
 
-    public boolean isBookStatus() { return bookStatus; }
+    public boolean isIsComplete() { return isComplete; }
 
 }
