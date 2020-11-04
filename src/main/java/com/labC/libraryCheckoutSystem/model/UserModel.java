@@ -12,6 +12,16 @@ public class UserModel {
     private String name;
     private String email;
 
+    //Relationship with bookshelf
+    @OneToOne
+    @JoinColumn(name="bookshelf_id")
+    private Bookshelf bookshelf;
+
+    //Relationship with cart
+    @OneToOne
+    @JoinColumn(name="cart_id")
+    private Cart cart;
+
 
 
     //Constructors
