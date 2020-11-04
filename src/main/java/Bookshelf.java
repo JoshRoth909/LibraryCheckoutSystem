@@ -1,23 +1,29 @@
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Bookshelf {
+
     @Id
-
     @GeneratedValue(strategy = GenerationType.AUTO)
-
-    @OneToOne(mappedBy = "book_id")
-    private Long book;
-
-    @OneToOne(mappedBy = "user_id")
     private Long id;
+
+    // add join column to Books model
+    @OneToMany(mappedBy = "books")
+    private List<Book> books;
+
+    // add join column to Users model
+    @OneToOne(mappedBy = "users")
     private Users users;
 
     public Bookshelf() {}
-    public long getId() {
+
+    public Long getId() {
         return id;
     }
-    public long getBook() {
-        return book_id;
+
+    public List<Book> getBook() {
+        return books;
     }
+
 }
