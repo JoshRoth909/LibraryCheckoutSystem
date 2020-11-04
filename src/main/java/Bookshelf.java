@@ -8,11 +8,9 @@ public class Bookshelf {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    // add join column to Books model
     @OneToMany(mappedBy = "books")
     private List<Book> books;
 
-    // add join column to Users model
     @OneToOne(mappedBy = "users")
     private Users users;
 
