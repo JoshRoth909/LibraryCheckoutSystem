@@ -4,13 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CartService {
+public interface CartService {
 
     @Autowired
     CartRepo cartRepo;
 
-    public void saveCart(String book,boolean checkStatus){
-        cartRepo.save(new Cart(book, checkStatus));
-        System.out.println("Book added to cart");
-    }
+    public String saveCart(String book,boolean bookStatus);
 }
