@@ -7,7 +7,7 @@ public class UserModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     private String name;
     private String email;
@@ -21,7 +21,6 @@ public class UserModel {
     @OneToOne
     @JoinColumn(name="cart_id")
     private Cart cart;
-
 
 
     //Constructors
