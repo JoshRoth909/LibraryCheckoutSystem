@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 
-@Service
+
 public interface  UserService {
     
    Optional<User> getUserById(Long id);
@@ -17,4 +17,5 @@ public interface  UserService {
    Void removeUser(Long id);
 
 
+   Iterable<User>getAllUsers();
 }

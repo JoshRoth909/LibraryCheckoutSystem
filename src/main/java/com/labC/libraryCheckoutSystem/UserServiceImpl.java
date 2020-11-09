@@ -2,12 +2,14 @@ package com.labC.libraryCheckoutSystem;
 
 import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+@Service
 
 public class UserServiceImpl implements UserService{
-//    @Autowired
-//    UserRepo userRepo;
+  //  @Autowired
+    UserRepo userRepo;
 
     public UserServiceImpl(UserRepo userRepo){
         this.userRepo = userRepo;
@@ -36,6 +38,13 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public Void removeUser(Long id) {
+
         return null;
     }
+
+    @Override
+    public Iterable<User>getAllUsers() {
+        return userRepo.findAll();
+    }
+
 }
