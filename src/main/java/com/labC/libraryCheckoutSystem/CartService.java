@@ -6,8 +6,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface CartService {
 
-    @Autowired
-    CartRepo cartRepo;
-
-    public String saveCart(String book,boolean bookStatus);
+    public String saveCart(cart Id, String book);
 }
